@@ -1,0 +1,153 @@
+.App {
+  background-color: var(--dark);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+.container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  max-width: 600px;
+  max-height: 550px;
+  background-color: var(--light);
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: var(--header-height);
+}
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: var(--dark-gray);
+  box-shadow: 0 1px var(--gray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+}
+.selfImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.selfName {
+  font-size: 20px;
+  line-height: 18px;
+  font-weight: 600;
+}
+.selfEmail {
+  font-size: 15px;
+  color: var(--light-dark);
+}
+.signOut {
+  margin-right: 15px;
+  padding: 6px 12px;
+}
+.signInContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.signIn {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: var(--dark);
+  color: var(--light);
+  outline: none;
+  border-radius: 5px;
+  border: unset;
+}
+.chatRoom {
+  position: relative;
+  padding-bottom: var(--footer-height);
+  height: 100%;
+}
+.footer {
+  position: absolute;
+  display: flex;
+  height: var(--footer-height);
+  align-items: center;
+  left: 0;
+  bottom: 0;
+  padding: 10px;
+  background-color: var(--gray);
+  width: 100%;
+  justify-content: space-around;
+}
+.messageInput {
+  width: calc(100% - 120px);
+  border: unset;
+  resize: unset;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.messageInput:focus {
+  outline: unset;
+}
+.sendButton {
+  outline: unset;
+  border: unset;
+  padding: 14px 20px;
+  border-radius: 5px;
+}
+.chatList {
+  list-style: none;
+  padding: 5px 10px;
+  height: 100%;
+  overflow-y: scroll;
+}
+.chatList::-webkit-scrollbar {
+  width: 2px;
+}
+.message {
+  margin: 5px 0;
+  width: fit-content;
+  max-width: 250px;
+  min-width: 80px;
+}
+.sent {
+  margin-left: auto;
+}
+.message.sent + .message.sent .username {
+  display: none;
+}
+.username {
+  font-size: 10px;
+  line-height: 10px;
+  margin-bottom: 2px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: right;
+}
+.messageText {
+  padding: 10px 10px 16px 10px;
+  border-radius: 5px;
+}
+.sent.messageText {
+  background-color: var(--gray);
+  position: relative;
+}
+.received.messageText {
+  background-color: var(--dark);
+  color: var(--light);
+}
+.date {
+  font-size: 9px;
+  position: absolute;
+  right: 5px;
+  bottom: 3px;
+}
